@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reverse Text Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e90ff, #ff0000);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-left: 10px;
+            background-color: gold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 24px;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reverse Text Generator</h1>
+        <input type="text" id="userInput" placeholder="Type something...">
+        <button onclick="processText()">Reverse</button>
+        <div id="output"></div>
+    </div>
 
+    <script>
+        async function processText() {
+            const input = document.getElementById('userInput').value.trim();
+            const output = document.getElementById('output');
+
+            if (!input) {
+                output.innerHTML = "Please type something!";
+                return;
+            }
+
+            const response = await fetch('/reverse', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: input })
+            });
+
+            const data = await response.json();
+
+            if (data.status === "success") {
+                output.innerHTML = data.reversed;
+            } else {
+                output.innerHTML = "Error processing text.";
+            }
+        }
+    </script>
+</body>
+</html>
