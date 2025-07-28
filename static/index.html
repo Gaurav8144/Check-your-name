@@ -1,130 +1,161 @@
-<!DOCTYPE html>  <html lang="en">  
+<!DOCTYPE html>
+<html lang="en">
 <head>  
-    <meta charset="UTF-8" />  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-    <title>Reverse Text Generator</title>  
-    <style>  
-        body {  
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
-            background: linear-gradient(to right, #00c6ff, #0072ff); /* blue shades */  
-            color: #ffffff;  
-            text-align: center;  
-            padding: 50px;  
-            margin: 0;  
-        }  .container {  
-        background: rgba(255, 255, 255, 0.1);  
-        padding: 30px;  
-        border-radius: 15px;  
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);  
-        display: inline-block;  
-        max-width: 90%;  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>Reverse Text Generator</title>  
+  <style>  
+    body {  
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+      background: linear-gradient(to right, #00c6ff, #0072ff);  
+      color: #ffffff;  
+      text-align: center;  
+      padding: 50px;  
+      margin: 0;  
     }  
-
+    .container {  
+      background: rgba(255, 255, 255, 0.1);  
+      padding: 30px;  
+      border-radius: 15px;  
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);  
+      display: inline-block;  
+      max-width: 90%;  
+    }  
     h1 {  
-        font-size: 2.5em;  
-        margin-bottom: 20px;  
+      font-size: 2.5em;  
+      margin-bottom: 20px;  
     }  
-
     input {  
-        padding: 12px;  
-        width: 280px;  
-        font-size: 18px;  
-        border-radius: 8px;  
-        border: none;  
-        outline: none;  
-        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);  
+      padding: 12px;  
+      width: 280px;  
+      font-size: 18px;  
+      border-radius: 8px;  
+      border: none;  
+      outline: none;  
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);  
     }  
-
     button {  
-        padding: 12px 25px;  
-        font-size: 18px;  
-        margin-left: 10px;  
-        background-color: #00ff95;  
-        color: #000;  
-        border: none;  
-        border-radius: 8px;  
-        cursor: pointer;  
-        font-weight: bold;  
-        transition: 0.3s;  
+      padding: 12px 25px;  
+      font-size: 18px;  
+      margin-left: 10px;  
+      background-color: #00ff95;  
+      color: #000;  
+      border: none;  
+      border-radius: 8px;  
+      cursor: pointer;  
+      font-weight: bold;  
+      transition: 0.3s;  
     }  
-
     button:hover {  
-        background-color: #00cc77;  
+      background-color: #00cc77;  
     }  
-
     #output {  
-        margin-top: 30px;  
-        font-size: 24px;  
-        color: #ffff00;  
+      margin-top: 30px;  
+      font-size: 24px;  
+      color: #ffff00;  
     }  
-
     .ad-banner {  
-        margin: 20px auto;  
-        text-align: center;  
+      margin: 20px auto;  
+      text-align: center;  
     }  
-</style>
-
+  </style>
 </head>  
-<body>  <!-- ✅ Ad Banner Top -->  
-<div class="ad-banner">  
+
+<body>
+
+  <!-- ✅ Ad Banner Top -->  
+  <div class="ad-banner">  
     <script type="text/javascript">  
-        atOptions = {  
-            'key' : '23e57731af51a0b592c13272c1ee9bd6',  
-            'format' : 'iframe',  
-            'height' : 60,  
-            'width' : 468,  
-            'params' : {}  
-        };  
+      atOptions = {  
+        'key' : '23e57731af51a0b592c13272c1ee9bd6',  
+        'format' : 'iframe',  
+        'height' : 60,  
+        'width' : 468,  
+        'params' : {}  
+      };  
     </script>  
     <script type="text/javascript" src="//www.highperformanceformat.com/23e57731af51a0b592c13272c1ee9bd6/invoke.js"></script>  
-</div>  
+  </div>  
 
-<div class="container">  
+  <div class="container">  
     <h1>🔁 Reverse Text Generator</h1>  
     <input type="text" id="userInput" placeholder="Type something...">  
     <button onclick="processText()">Reverse</button>  
     <div id="output"></div>  
-</div>  
+  </div>  
 
-<!-- ✅ Ad Banner Bottom -->  
-<div class="ad-banner">  
+  <!-- ✅ Inserted Middle Ad (ProfitablerateCPM) -->  
+  <div class="ad-banner">  
+    <script type='text/javascript' src='//pl27269638.profitableratecpm.com/a0/45/48/a045483f38997f11f825a4b568b72063.js'></script>  
+  </div>  
+
+  <!-- ✅ Ad Banner Bottom -->  
+  <div class="ad-banner">  
     <script type="text/javascript">  
-        atOptions = {  
-            'key' : '23e57731af51a0b592c13272c1ee9bd6',  
-            'format' : 'iframe',  
-            'height' : 60,  
-            'width' : 468,  
-            'params' : {}  
-        };  
+      atOptions = {  
+        'key' : '23e57731af51a0b592c13272c1ee9bd6',  
+        'format' : 'iframe',  
+        'height' : 60,  
+        'width' : 468,  
+        'params' : {}  
+      };  
     </script>  
     <script type="text/javascript" src="//www.highperformanceformat.com/23e57731af51a0b592c13272c1ee9bd6/invoke.js"></script>  
-</div>  
+  </div>  
 
-<script>  
+  <!-- ✅ Floating Right Ad (300x250) -->  
+  <div style="position: fixed; right: 10px; top: 150px; z-index: 9999;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '3cf949a64578bd2cbbd49aa8bbe24bdf',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/3cf949a64578bd2cbbd49aa8bbe24bdf/invoke.js"></script>
+  </div>
+
+  <!-- ✅ Floating Left Ad (160x600) -->  
+  <div style="position: fixed; left: 10px; top: 150px; z-index: 9999;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '769cf1e553aff1de23b33eda1604c94d',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/769cf1e553aff1de23b33eda1604c94d/invoke.js"></script>
+  </div>
+
+  <script>  
     async function processText() {  
-        const input = document.getElementById('userInput').value.trim();  
-        const output = document.getElementById('output');  
+      const input = document.getElementById('userInput').value.trim();  
+      const output = document.getElementById('output');  
 
-        if (!input) {  
-            output.innerHTML = "⚠️ Please type something!";  
-            return;  
-        }  
+      if (!input) {  
+        output.innerHTML = "⚠️ Please type something!";  
+        return;  
+      }  
 
-        const response = await fetch('/reverse', {  
-            method: 'POST',  
-            headers: { 'Content-Type': 'application/json' },  
-            body: JSON.stringify({ text: input })  
-        });  
+      const response = await fetch('/reverse', {  
+        method: 'POST',  
+        headers: { 'Content-Type': 'application/json' },  
+        body: JSON.stringify({ text: input })  
+      });  
 
-        const data = await response.json();  
+      const data = await response.json();  
 
-        if (data.status === "success") {  
-            output.innerHTML = `🔁 ${data.reversed}`;  
-        } else {  
-            output.innerHTML = "❌ Error processing text.";  
-        }  
+      if (data.status === "success") {  
+        output.innerHTML = `🔁 ${data.reversed}`;  
+      } else {  
+        output.innerHTML = "❌ Error processing text.";  
+      }  
     }  
-</script>
+  </script>
 
 </body>  
-</html> 
+</html>
